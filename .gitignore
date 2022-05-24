@@ -1,0 +1,9 @@
+/MountainAndSeaServer/.idea
+/MountainAndSeaServer/target
+/MountainAndSeaServer/*.iml
+/MountainAndSeaServer/test-code/target
+/MountainAndSeaServer/base-core/target
+/MountainAndSeaServer/test-code/.idea
+/MountainAndSeaServer/base-core/.idea
+/MountainAndSeaServer/test-code/*.iml
+/MountainAndSeaServer/base-core/*.iml
