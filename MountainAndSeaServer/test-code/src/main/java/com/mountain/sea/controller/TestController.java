@@ -1,5 +1,6 @@
 package com.mountain.sea.controller;
 
+import com.mountain.sea.core.exception.RestApiException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
     @RequestMapping("/test")
-    public Object test(){
-        return "hello world";
+    public Object a(){
+        throw new RestApiException("100","test");
+//        return "hello world";
     }
 }

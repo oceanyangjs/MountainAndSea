@@ -18,8 +18,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * @date 2022/5/20 16:09
  */
 @RestControllerAdvice
-public class ResonseBodyResultAdvice implements ResponseBodyAdvice<Object> {
-    public ResonseBodyResultAdvice() {
+public class ResponseBodyResultAdvice implements ResponseBodyAdvice<Object> {
+    public ResponseBodyResultAdvice() {
     }
 
     @Override
