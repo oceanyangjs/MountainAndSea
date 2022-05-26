@@ -23,10 +23,13 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 <!--    相关版本-->
     <spring.cloud.version>2021.0.2</spring.cloud.version>
+    <springcloud.alibaba.version>2021.0.1.0</springcloud.alibaba.version>
     <spring.boot.version>2.6.7</spring.boot.version>
     <swagger.version>2.9.2</swagger.version>
     <mybatis.starter.version>1.3.2</mybatis.starter.version>
     <pagehelper.spring.boot.starter.version>1.2.3</pagehelper.spring.boot.starter.version>
+    <guava.version>31.1-jre</guava.version>
+    <hutool.version>5.8.1</hutool.version>
   </properties>
 
   <dependencyManagement>
@@ -35,6 +38,14 @@
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
         <version>${spring.cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${springcloud.alibaba.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -63,6 +74,30 @@
   </dependencyManagement>
 
   <dependencies>
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.cloud</groupId>-->
+<!--      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.cloud</groupId>-->
+<!--      <artifactId>spring-cloud-starter-zipkin</artifactId>-->
+<!--    </dependency>-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.cloud</groupId>-->
+<!--      <artifactId>spring-cloud-netflix-hystrix</artifactId>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
@@ -109,6 +144,17 @@
       <artifactId>springfox-swagger-ui</artifactId>
       <version>${swagger.version}</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+<!--      <type>bundle</type>-->
+    </dependency>
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>${hutool.version}</version>
     </dependency>
   </dependencies>
 

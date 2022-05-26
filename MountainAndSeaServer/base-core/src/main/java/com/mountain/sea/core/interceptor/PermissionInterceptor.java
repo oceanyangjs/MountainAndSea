@@ -1,12 +1,11 @@
 package com.mountain.sea.core.interceptor;
 
-import com.mountain.sea.core.annotation.AccessPermission;
 import com.mountain.sea.core.exception.ExceptionEnum;
 import com.mountain.sea.core.exception.RestApiException;
+import com.mountain.sea.core.annotation.AccessPermission;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.AsyncHandlerInterceptor;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

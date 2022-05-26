@@ -1,6 +1,9 @@
 package com.mountain.sea.controller;
 
-import com.mountain.sea.core.exception.RestApiException;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.mountain.sea.microservice.TestFeign;
+import com.mountain.sea.microservice.TestFeign2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,9 +14,27 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
+    @Autowired
+    TestFeign testFeign;
+    @Autowired
+    TestFeign2 testFeign2;
+
     @RequestMapping("/test")
+    @SentinelResource("/test")
     public Object a(){
-        throw new RestApiException("100","test");
-//        return "hello world";
+//        throw new RestApiException("100","test");
+        return "hello world";
+    }
+
+    @RequestMapping("/testFeign")
+    @SentinelResource("/testFeign")
+    public Object testFeign(){
+        return testFeign.test();
+    }
+
+    @RequestMapping("/testFeign2")
+    @SentinelResource("/testFeign2")
+    public Object testFeign2(){
+        return testFeign2.test();
     }
 }

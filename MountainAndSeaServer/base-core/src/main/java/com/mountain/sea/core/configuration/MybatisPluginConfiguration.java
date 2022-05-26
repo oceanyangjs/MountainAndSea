@@ -1,16 +1,12 @@
 package com.mountain.sea.core.configuration;
 
-import com.github.pagehelper.PageInterceptor;
 import com.mountain.sea.core.interceptor.SqlInterceptor;
-import com.mountain.sea.core.mybatis.handler.enums.BaseEnum;
-import com.mountain.sea.core.mybatis.handler.enums.GeneralTypeHandler;
-import com.mountain.sea.core.utils.ClassUtils;
+import com.github.pagehelper.PageInterceptor;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 import org.mybatis.spring.boot.autoconfigure.ConfigurationCustomizer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 
-import java.util.List;
 import java.util.Properties;
 
 /**
