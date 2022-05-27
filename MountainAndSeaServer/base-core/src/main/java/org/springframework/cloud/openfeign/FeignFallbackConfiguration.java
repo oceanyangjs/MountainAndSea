@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * @deprecated
  * @author Yang Jingsheng
  * @version 1.0
  * @date 2022/5/25 14:39
@@ -37,7 +38,7 @@ public class FeignFallbackConfiguration {
 
         @Bean
         @ConditionalOnMissingBean
-//        @ConditionalOnBean(CircuitBreakerFactory.class)
+        @ConditionalOnBean(CircuitBreakerFactory.class)
         public Targeter circuitBreakerFeignTargeter(CircuitBreakerFactory circuitBreakerFactory,
                                                     @Value("${feign.circuitbreaker.group.enabled:false}") boolean circuitBreakerGroupEnabled,
                                                     CircuitBreakerNameResolver circuitBreakerNameResolver) {

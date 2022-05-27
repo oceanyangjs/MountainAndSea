@@ -10,5 +10,5 @@ spring:
 feign:
   sentinel:
     enabled: true
-  circuitbreaker:
-    enabled=true:
+#  circuitbreaker:
+#    enabled=true:

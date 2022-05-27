@@ -8,6 +8,7 @@ import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.util.StringUtils;
 
 /**
+ * @deprecated
  * @author Yang Jingsheng
  * @version 1.0
  * @date 2022/5/26 9:34
