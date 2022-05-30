@@ -3,7 +3,10 @@
 /MountainAndSeaServer/*.iml
 /MountainAndSeaServer/test-code/target
 /MountainAndSeaServer/base-core/target
+/MountainAndSeaServer/gateway-service/target
 /MountainAndSeaServer/test-code/.idea
 /MountainAndSeaServer/base-core/.idea
+/MountainAndSeaServer/gateway-service/.idea
 /MountainAndSeaServer/test-code/*.iml
 /MountainAndSeaServer/base-core/*.iml
+/MountainAndSeaServer/gateway-service/*.iml

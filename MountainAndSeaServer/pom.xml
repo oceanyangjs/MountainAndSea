@@ -11,6 +11,8 @@
   <modules>
     <module>base-core</module>
     <module>test-code</module>
+      <module>gateway-service</module>
+      <module>test-code2</module>
   </modules>
 
   <name>MountainAndSeaServer</name>
