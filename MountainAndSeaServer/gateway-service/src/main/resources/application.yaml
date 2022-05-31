@@ -5,10 +5,23 @@ spring:
     sentinel:
       transport:
         port: 8719
-        dashboard: 192.168.10.229:8080
+        dashboard: 127.0.0.1:8080
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: test-code
+          uri: lb://test-code
+          filters:
+            - StripPrefix=3
+#            - name: Hystrix
+#              args:
+#                name: default
+#                fallbackUri: forward:/fallback
+          predicates:
+            - Path=/api/v1/testCode/**
+
 feign:
   sentinel:
     enabled: true
