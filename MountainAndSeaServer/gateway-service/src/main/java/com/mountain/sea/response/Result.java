@@ -1,6 +1,5 @@
-package com.mountain.sea.core.response;
+package com.mountain.sea.response;
 
-import com.mountain.sea.core.exception.ExceptionEnum;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
@@ -47,11 +46,11 @@ public class Result<T> {
         this.error = error;
     }
 
-    public static Result.Builder builder() {
-        return new Result.BuilderImpl();
+    public static Builder builder() {
+        return new BuilderImpl();
     }
 
-    private static class BuilderImpl implements Result.Builder {
+    private static class BuilderImpl implements Builder {
         private boolean success;
         private Object body;
         private Error error;
@@ -60,25 +59,25 @@ public class Result<T> {
         }
 
         @Override
-        public Result.Builder body(Object body) {
+        public Builder body(Object body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public Result.Builder success(boolean success) {
+        public Builder success(boolean success) {
             this.success = success;
             return this;
         }
 
         @Override
-        public Result.Builder error(ExceptionEnum exceptionInfoEnum) {
+        public Builder error(ExceptionEnum exceptionInfoEnum) {
             this.error = new Error(exceptionInfoEnum);
             return this;
         }
 
         @Override
-        public Result.Builder error(String code, String message) {
+        public Builder error(String code, String message) {
             this.error = new Error(code, message);
             return this;
         }
@@ -90,13 +89,13 @@ public class Result<T> {
     }
 
     public interface Builder {
-        Result.Builder success(boolean var1);
+        Builder success(boolean var1);
 
-        Result.Builder body(Object var1);
+        Builder body(Object var1);
 
-        Result.Builder error(ExceptionEnum var1);
+        Builder error(ExceptionEnum var1);
 
-        Result.Builder error(String var1, String var2);
+        Builder error(String var1, String var2);
 
         <T> Result<T> build();
     }
