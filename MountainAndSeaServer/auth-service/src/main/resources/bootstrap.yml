@@ -1,6 +1,8 @@
 spring:
   application:
     name: auth-service
+  profiles:
+    active: @environment@
   cloud:
     nacos:
       config:
