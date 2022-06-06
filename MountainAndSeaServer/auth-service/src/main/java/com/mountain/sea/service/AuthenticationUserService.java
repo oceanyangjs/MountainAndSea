@@ -1,5 +1,6 @@
 package com.mountain.sea.service;
 
+import com.mountain.sea.UserDetail;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -12,10 +13,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 //todo 自定义认证方式需要生效
-//public class AuthenticationUserService implements UserDetailsService {
-public class AuthenticationUserService{
-//    @Override
+public class AuthenticationUserService implements UserDetailsService {
+//public class AuthenticationUserService{
+    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+        UserDetail userDetail = new UserDetail();
+        userDetail.setUsername(username);
+        userDetail.setPassword("123456");
+        return userDetail;
     }
 }

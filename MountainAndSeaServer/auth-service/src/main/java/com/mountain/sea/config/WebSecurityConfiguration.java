@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
@@ -31,19 +32,20 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     AuthenticationUserService authenticationUserService;
 
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        //auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance()).withUser("admin").password("123456").roles("ADMIN");
-//        auth.authenticationProvider(daoAuthenticationProvider());
-//    }
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        //auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance()).withUser("admin").password("123456").roles("ADMIN");
+        auth.authenticationProvider(daoAuthenticationProvider());
+    }
 
-//    private AuthenticationProvider daoAuthenticationProvider() {
-//        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-//        provider.setUserDetailsService(authenticationUserService);
+    private AuthenticationProvider daoAuthenticationProvider() {
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setUserDetailsService(authenticationUserService);
 //        provider.setPasswordEncoder(passwordEncoder());
-//        provider.setHideUserNotFoundExceptions(false);
-//        return provider;
-//    }
+        provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+        provider.setHideUserNotFoundExceptions(false);
+        return provider;
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
