@@ -1,4 +1,4 @@
-package com.mountain.sea;
+package com.mountain.sea.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

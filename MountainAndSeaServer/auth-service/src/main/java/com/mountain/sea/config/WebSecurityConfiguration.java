@@ -1,5 +1,6 @@
 package com.mountain.sea.config;
 
+import com.mountain.sea.core.utils.RedisUtils;
 import com.mountain.sea.security.*;
 import com.mountain.sea.service.AuthenticationUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     AuthenticationUserService authenticationUserService;
+    @Autowired
+    JwtProperties jwtProperties;
+    @Autowired
+    RedisUtils redisUtils;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -77,7 +82,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     private AuthenticationSuccessHandler loginSuccessHandler() {
-        return new LoginSuccessHandler();
+        return new LoginSuccessHandler(this.jwtProperties,this.redisUtils);
     }
 
     public PasswordEncoder passwordEncoder() {

@@ -3,8 +3,8 @@ server:
   port: 9999
 #  configure for the sentinel-dashboard
 spring:
-#  application:
-#    name: test-code
+  application:
+    name: test-code
   cloud:
     sentinel:
       transport:

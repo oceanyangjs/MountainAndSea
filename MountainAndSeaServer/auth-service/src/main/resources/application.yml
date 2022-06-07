@@ -2,6 +2,10 @@ server:
   port: 40001
 
 spring:
+  application:
+    name: auth-service
+  profiles:
+    active: @environment@
   cloud:
     sentinel:
       transport:
@@ -14,3 +18,9 @@ spring:
 feign:
   sentinel:
     enabled: true
+
+iot:
+  jwt:
+    secret: iot@Login(Auth}*^31)&iot%
+    expire: 31622400
+    sessionTimeout: 31536000

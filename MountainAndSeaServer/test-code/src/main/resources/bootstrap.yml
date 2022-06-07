@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: test-code
   cloud:
     nacos:
       config:

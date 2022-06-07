@@ -1,6 +1,6 @@
 package com.mountain.sea.service;
 
-import com.mountain.sea.UserDetail;
+import com.mountain.sea.security.UserDetail;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -18,6 +18,7 @@ public class AuthenticationUserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetail userDetail = new UserDetail();
+        userDetail.setId(Math.round(Math.random()*10000));
         userDetail.setUsername(username);
         userDetail.setPassword("123456");
         return userDetail;

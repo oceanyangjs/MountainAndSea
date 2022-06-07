@@ -1,6 +1,10 @@
 package com.mountain.sea.core.utils;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
@@ -17,6 +21,17 @@ public final class RedisUtils {
     private RedisTemplate redisTemplate;
 
     public RedisUtils(RedisTemplate redisTemplate) {
+////        处理redis类型转换
+//        Jackson2JsonRedisSerializer jacksonSerializer = new Jackson2JsonRedisSerializer(Object.class);
+//        ObjectMapper om = new ObjectMapper();
+//        om.configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES, true);
+//        jacksonSerializer.setObjectMapper(om);
+//        redisTemplate.setValueSerializer(jacksonSerializer);
+//        redisTemplate.setKeySerializer(new StringRedisSerializer());
+//        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
+//        redisTemplate.setHashValueSerializer(jacksonSerializer);
+//        redisTemplate.afterPropertiesSet();
+//        redisTemplate.afterPropertiesSet();
         this.redisTemplate = redisTemplate;
     }
 
