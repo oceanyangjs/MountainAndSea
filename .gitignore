@@ -5,11 +5,14 @@
 /MountainAndSeaServer/base-core/target
 /MountainAndSeaServer/gateway-service/target
 /MountainAndSeaServer/auth-service/target
+/MountainAndSeaServer/socketio-service/target
 /MountainAndSeaServer/test-code/.idea
 /MountainAndSeaServer/base-core/.idea
 /MountainAndSeaServer/gateway-service/.idea
 /MountainAndSeaServer/auth-service/.idea
+/MountainAndSeaServer/socketio-service/.idea
 /MountainAndSeaServer/test-code/*.iml
 /MountainAndSeaServer/base-core/*.iml
 /MountainAndSeaServer/gateway-service/*.iml
 /MountainAndSeaServer/auth-service/*.iml
+/MountainAndSeaServer/socketio-service/*.iml

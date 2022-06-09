@@ -13,6 +13,7 @@
     <module>test-code</module>
     <module>gateway-service</module>
     <module>auth-service</module>
+      <module>socketio-service</module>
   </modules>
 
   <name>MountainAndSeaServer</name>

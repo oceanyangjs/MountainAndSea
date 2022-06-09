@@ -22,6 +22,7 @@
         <redis.version>2.1.12.RELEASE</redis.version>
         <common.lang.version>3.8.1</common.lang.version>
         <jjwt.version>0.9.0</jjwt.version>
+        <json-path.version>2.4.0</json-path.version>
     </properties>
 
     <dependencies>
@@ -55,6 +56,11 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>${jjwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${json-path.version}</version>
         </dependency>
     </dependencies>
 
