@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.mountain.sea</groupId>
+  <artifactId>MountainAndSeaStream</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>test-stream</module>
+  </modules>
+
+  <name>MountainAndSeaStream</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <flink-java.version>1.10.1</flink-java.version>
+    <flink-streaming-java_2.12.version>1.10.1</flink-streaming-java_2.12.version>
+    <flink-walkthrough-common_2.12.version>1.10.1</flink-walkthrough-common_2.12.version>
+    <flink-connector-kafka_2.12.version>1.9.1</flink-connector-kafka_2.12.version>
+  </properties>
+
+<!--  <dependencyManagement>-->
+<!--    <dependencies>-->
+<!--      <dependency>-->
+<!--        <groupId>org.apache.flink</groupId>-->
+<!--        <artifactId>flink-java</artifactId>-->
+<!--        <version>${flink-java.version}</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>org.apache.flink</groupId>-->
+<!--        <artifactId>flink-streaming-java_2.12</artifactId>-->
+<!--        <version>${flink-streaming-java_2.12.version}</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>org.apache.flink</groupId>-->
+<!--        <artifactId>flink-walkthrough-common_2.12</artifactId>-->
+<!--        <version>${flink-walkthrough-common_2.12.version}</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>org.apache.flink</groupId>-->
+<!--        <artifactId>flink-connector-kafka_2.12</artifactId>-->
+<!--        <version>${flink-connector-kafka_2.12.version}</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
+<!--    </dependencies>-->
+<!--  </dependencyManagement>-->
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-java</artifactId>
+      <version>${flink-java.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-streaming-java_2.12</artifactId>
+      <version>${flink-streaming-java_2.12.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-walkthrough-common_2.12</artifactId>
+      <version>${flink-walkthrough-common_2.12.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-connector-kafka_2.12</artifactId>
+      <version>${flink-connector-kafka_2.12.version}</version>
+    </dependency>
+  </dependencies>
+</project>

@@ -16,3 +16,9 @@
 /MountainAndSeaServer/gateway-service/*.iml
 /MountainAndSeaServer/auth-service/*.iml
 /MountainAndSeaServer/socketio-service/*.iml
+/MountainAndSeaStream/.idea
+/MountainAndSeaStream/target
+/MountainAndSeaStream/*.iml
+/MountainAndSeaServer/test-stream/target
+/MountainAndSeaServer/test-stream/.idea
+/MountainAndSeaServer/test-stream/*.iml
