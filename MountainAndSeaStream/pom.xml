@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>test-stream</module>
+    <module>base-core</module>
   </modules>
 
   <name>MountainAndSeaStream</name>
