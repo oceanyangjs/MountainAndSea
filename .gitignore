@@ -16,6 +16,9 @@
 /MountainAndSeaServer/socketio-service/target
 /MountainAndSeaServer/socketio-service/.idea
 /MountainAndSeaServer/socketio-service/*.iml
+/MountainAndSeaServer/netty-service/target
+/MountainAndSeaServer/netty-service/.idea
+/MountainAndSeaServer/netty-service/*.iml
 /MountainAndSeaStream/.idea
 /MountainAndSeaStream/target
 /MountainAndSeaStream/*.iml

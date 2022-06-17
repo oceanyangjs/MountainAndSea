@@ -1,0 +1,20 @@
+server:
+  port: 12999
+netty:
+  port: 12000
+spring:
+  application:
+    name: gateway-service
+  profiles:
+    active: @environment@
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 127.0.0.1:8080
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+feign:
+  sentinel:
+    enabled: true
