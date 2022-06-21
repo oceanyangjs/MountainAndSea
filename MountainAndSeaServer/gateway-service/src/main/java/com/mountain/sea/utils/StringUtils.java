@@ -1,9 +1,9 @@
 package com.mountain.sea.utils;
 
-import com.sun.tools.javac.util.List;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 /**
  * @author Yang Jingsheng

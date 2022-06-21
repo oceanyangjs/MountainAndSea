@@ -14,10 +14,8 @@ import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-import sun.tools.java.Constants;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -47,7 +45,7 @@ public class AuthenticationTokenFilter implements GlobalFilter, CommandLineRunne
         logger.info("token验证----");
         ServerHttpRequest request = exchange.getRequest();
         String value = request.getPath().value();
-        if(!CollectionUtils.isEmpty(properties.getIgnoreUrl())){
+        if(properties.getIgnoreUrl() != null && properties.getIgnoreUrl().size() != 0){
             boolean flag;
             for (String path:properties.getIgnoreUrl()) {
                 path = path.replace("/**",".*");

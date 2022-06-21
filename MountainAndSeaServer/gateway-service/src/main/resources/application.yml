@@ -25,7 +25,9 @@ spring:
 #                fallbackUri: forward:/fallback
           predicates:
             - Path=/api/v1/testCode/**
-
+gateway:
+  ignoreUrl:
+    - /websocket
 feign:
   sentinel:
     enabled: true

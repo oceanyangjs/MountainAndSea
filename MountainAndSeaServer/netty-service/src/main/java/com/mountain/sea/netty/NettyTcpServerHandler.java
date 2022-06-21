@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  * @version 1.0
  * @date 2022/6/15 19:53
  */
-public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+public class NettyTcpServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx){
