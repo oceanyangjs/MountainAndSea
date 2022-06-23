@@ -24,7 +24,15 @@ spring:
 #                name: default
 #                fallbackUri: forward:/fallback
           predicates:
-            - Path=/api/v1/testCode/**
+            - Path=/api/v1/test-code/**
+        - id: netty-service
+          uri: lb://netty-service
+          predicates:
+            - Path=/websocket/**
+        - id: socketio-service
+          uri: lb://socketio-service
+          predicates:
+            - Path=/socket.io/**
 gateway:
   ignoreUrl:
     - /websocket
