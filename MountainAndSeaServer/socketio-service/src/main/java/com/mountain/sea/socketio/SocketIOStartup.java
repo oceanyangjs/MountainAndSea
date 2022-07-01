@@ -92,7 +92,7 @@ public class SocketIOStartup implements CommandLineRunner {
 
     private void bindEventListener() {
 
-        socketIOServer.addEventListener("cmd", Object.class, new DataListener<Object>() {
+        socketIOServer.getNamespace("/model_data_monitor").addEventListener("cmd", Object.class, new DataListener<Object>() {
             @Override
             public void onData(SocketIOClient socketIOClient, Object value, AckRequest ackRequest) throws Exception {
                 System.out.println("receive message:" + value);
@@ -113,12 +113,12 @@ public class SocketIOStartup implements CommandLineRunner {
         try {
             String message = JSONObject.toJSONString((Map<String, Object>) object);
             cmd = JsonPathUtils.parseString(message, "$.cmd");
-            JSONObject jsonObject = JsonPathUtils.parseOject(message, "$.property", JSONObject.class);
+//            JSONObject jsonObject = JsonPathUtils.parseOject(message, "$.property", JSONObject.class);
 //            todo 由于移除了token验证，因此此处无法获得用户信息
 //            String[] tenantInfo = userInfoMap.get(socketIOClient.getSessionId().toString());
 //            jsonObject.put("tenantId", Long.parseLong(tenantInfo[1]));
 //            jsonObject.put("tenantName", tenantInfo[0]);
-            value = jsonObject.toString();
+            value = message;
         } catch (Exception e) {
             throw new RestApiException(ExceptionEnum.DATA_PARSE_EXCEPTION);
         }
