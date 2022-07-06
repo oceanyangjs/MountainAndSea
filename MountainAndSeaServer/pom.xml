@@ -15,6 +15,7 @@
     <module>auth-service</module>
       <module>socketio-service</module>
       <module>netty-service</module>
+      <module>test-webflux</module>
   </modules>
 
   <name>MountainAndSeaServer</name>

@@ -1,0 +1,22 @@
+
+server:
+  port: 9998
+#  configure for the sentinel-dashboard
+spring:
+  application:
+    name: test-webflux
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 127.0.0.1:8080
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  profiles:
+    active: @environment@
+feign:
+  sentinel:
+    enabled: true
+#  circuitbreaker:
+#    enabled=true:
