@@ -70,9 +70,9 @@ public class AuthenticationTokenFilter implements GlobalFilter, CommandLineRunne
         String auth_token = "";
         Map<String,Object> userInfo = new HashMap<>();
 //        验证失败逻辑
-        if(1 == 1){
-            return writeAuthenticationFailure(response,"验证异常");
-        }
+//        if(1 == 1){
+//            return writeAuthenticationFailure(response,"验证异常");
+//        }
         return chain.filter(FilterUtils.getServerWebExchange(exchange,
                 FilterUtils.getHttpRequest(request,
                         FilterUtils.getHttpHeadersConsumer(userInfo, auth_token))));

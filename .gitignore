@@ -31,3 +31,12 @@
 /MountainAndSeaStream/base-core/target
 /MountainAndSeaStream/base-core/.idea
 /MountainAndSeaStream/base-core/*.iml
+/MountainAndSeaGameServer/.idea
+/MountainAndSeaGameServer/target
+/MountainAndSeaGameServer/*.iml
+/MountainAndSeaGameServer/game-logic/target
+/MountainAndSeaGameServer/game-logic/.idea
+/MountainAndSeaGameServer/game-logic/*.iml
+/MountainAndSeaGameServer/common-module/target
+/MountainAndSeaGameServer/common-module/.idea
+/MountainAndSeaGameServer/common-module/*.iml

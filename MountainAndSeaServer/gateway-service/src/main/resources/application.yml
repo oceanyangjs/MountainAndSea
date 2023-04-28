@@ -13,6 +13,8 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+        namespace: '08dcb5d1-d86d-4dda-be46-45bb795f2d3e'
+        group: 'test-group'
     gateway:
       routes:
         - id: test-code
